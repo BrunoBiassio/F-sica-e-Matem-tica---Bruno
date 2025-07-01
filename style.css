@@ -1,0 +1,321 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #4CAF50; /* Verde principal */
+    --secondary-color: #5f271d; /* Amarelo (para destaque, se necessário) */
+    --text-color: #333333; /* Cor do texto principal */
+    --background-light: #F8F9FA; /* Fundo claro */
+    --background-dark: #E0E0E0; /* Fundo cinza claro */
+    --border-color: #DDDDDD; /* Cor da borda */
+    --header-bg-color: #FFFFFF; /* Fundo do cabeçalho */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: var(--background-light);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Barra de Navegação --- */
+.navbar {
+    background-color: var(--header-bg-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo da navbar */
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 80px; /* Tamanho ajustado para a logo na navbar */
+    height: 80px;
+    border-radius: 50%; /* Transforma a logo em círculo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #388E3C; /* Um verde um pouco mais escuro no hover */
+}
+
+/* --- Hero Section (Cabeçalho Principal) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500') no-repeat center center/cover; /* Imagem de fundo opcional */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    /* Novas propriedades para o fundo */
+    background-color: var(--primary-color); /* Usando a cor verde principal */
+    color: white; /* Cor do texto branca para contraste */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    display: inline-block; /* Garante que o fundo se ajuste ao texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Uma sombra suave para um efeito flutuante */
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Seções de Conteúdo --- */
+.content-section {
+    background-color: var(--header-bg-color);
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.content-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    /* Novas propriedades para o fundo */
+    background-color: var(--primary-color); /* Usando a cor verde principal */
+    color: white; /* Cor do texto branca para contraste */
+    padding: 8px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    display: inline-block; /* Garante que o fundo se ajuste ao texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Remova a pseudo-classe ::after dos h2 se usar um fundo sólido */
+.content-section h2::after {
+    content: none;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.section-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px auto;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* New style for the diorama image */
+.section-image.large-image {
+    width: 100%; /* Make it span the full width of its container */
+    max-width: 600px; /* Limit its maximum width for very large screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Square corners for a diorama */
+    margin-bottom: 20px;
+}
+
+/* --- Vídeo Responsivo --- */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 (altura/largura * 100%) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* --- Medidas de pH do Solo --- */
+.ph-measurements {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    gap: 30px; /* Espaçamento entre os cards */
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ph-day {
+    flex: 1; /* Faz com que os cards ocupem o espaço disponível */
+    min-width: 300px; /* Largura mínima para cada card */
+    background-color: var(--background-dark);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.ph-day h3 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.ph-day p strong {
+    color: var(--secondary-color); /* Destaca os valores importantes */
+    font-weight: 700;
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 5px solid var(--primary-color);
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+        padding: 8px 15px; /* Ajuste o padding para telas menores */
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+        padding: 6px 12px; /* Ajuste o padding para telas menores */
+    }
+
+    .ph-measurements {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ph-day {
+        width: 100%;
+        min-width: unset;
+    }
+    .section-image.large-image { /* Ensure it remains responsive */
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        padding: 5px 10px; /* Ajuste o padding para telas menores */
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.7em;
+        padding: 4px 8px; /* Ajuste o padding para telas menores */
+    }
+    .section-image.large-image { /* Ensure it remains responsive */
+        width: 100%;
+    }
+}
