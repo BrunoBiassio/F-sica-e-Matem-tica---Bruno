@@ -1,1 +1,1 @@
-Projeto Física e Matemática, feito por Adalberto, Bruno e Pedro - 3C
+Projeto Física e Matemática, feito por Adalberto, Bruno, Eduardo Cesar e Pedro - 3C
